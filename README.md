@@ -154,6 +154,7 @@ Testing (FlyThings3D_occ):
 ```bash
 python diffsf_main.py --val_dataset f3d_occ --eval
 Testing (KITTI_occ): 
+```
 ```bash
 python diffsf_main.py --val_dataset kitti_occ --eval
 ```
@@ -166,6 +167,7 @@ Testing (FlyThings3D_nonocc):
 ```bash
 python diffsf_main.py --val_dataset f3d_nonocc --eval
 Testing (KITTI_nonocc): 
+```
 ```bash
 python diffsf_main.py --val_dataset kitti_nonocc --eval
 ```
