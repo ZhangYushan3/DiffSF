@@ -362,7 +362,7 @@ if __name__ == '__main__':
             test_batch_size = args.test_batch_size,
             test_epoch = args.test_epoch,                # total training steps
             results_folder = args.result_dir,
-            dataset = args.train_dataset     # f3d_occ / f3d_nonocc / kitti_occ / kitti_nonocc / waymo
+            dataset = args.val_dataset     # f3d_occ / f3d_nonocc / kitti_occ / kitti_nonocc / waymo
         )
         tester.test()
 
@@ -375,6 +375,6 @@ if __name__ == '__main__':
             train_num_steps = args.num_steps,         # total training steps
             results_folder = args.result_dir,
             checkpoint_dir = args.checkpoint_dir,
-            dataset = args.val_dataset                # f3d_occ / f3d_nonocc / waymo
+            dataset = args.train_dataset                # f3d_occ / f3d_nonocc / waymo
         )
         trainer.train()
