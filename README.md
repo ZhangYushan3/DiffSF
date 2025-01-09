@@ -1,10 +1,10 @@
 # DiffSF: Diffusion Models for Scene Flow Estimation
-### [Project Page (TODO)]() | [Paper](https://arxiv.org/abs/2403.05327)
+### [Project Page](https://zhangyushan3.github.io/DiffSF/) | [Paper](https://arxiv.org/abs/2403.05327)
 <br/>
 
 > DiffSF: Diffusion Models for Scene Flow Estimation
 > [Yushan Zhang](https://scholar.google.com/citations?user=mvY4rdIAAAAJ&hl=en), [Bastian Wandt](https://scholar.google.com/citations?user=z4aXEBYAAAAJ), [Maria Magnusson](), [Michael Felsberg](https://scholar.google.com/citations?&user=lkWfR08AAAAJ)  
-> Arxiv 2024
+> NeurIPS 2024 (Spotlight)
 
 ## Get started
 
