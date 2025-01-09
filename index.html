@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="DiffSF: Diffusion Models for Scene Flow Estimation">
+  <meta name="keywords" content="Scene Flow Estimation, Diffusion Models, Point Cloud">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GMSF: Global Matching Scene Flow</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DiffSF: Diffusion Models for Scene Flow Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mvY4rdIAAAAJ&hl=sv">YushanZhang</a>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.de/citations?user=z4aXEBYAAAAJ&hl=de">Bastian Wandt</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://liu.se/en/employee/segma96">Maria Magnusson</a>
+            </span>  
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?&user=lkWfR08AAAAJ">Michael Felsberg</a>
+            </span>            
+             <br>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">Computer Vision Laboratory, Linköping University &nbsp;&nbsp;</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+  <!--             <span class="link-block">
+                <a href="static/paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.05327"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- supp PDF Link. -->
+<!--               <span class="link-block">
+                <a href="static/supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
+                </a>
+              </span> -->
+              <!-- Video Link. 
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> 
+              -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ZhangYushan3/DiffSF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div style="display: flex; justify-content: center;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 3px;">
+                <img src="static/images/Framework.png" alt="Source Image" style="width:100%;"/>
+            </div>
+        </div>
+        <div align="center">
+              Method Overview
+        </div>
+    </div>
+    
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">TLDR</h2>
+        <div class="content has-text-justified">
+          <p>
+            Aiming at improving accuracy while additionally providing an estimate for uncertainty, we propose DiffSF that combines transformer-based scene flow estimation with denoising diffusion models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+</div> 
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose Global Matchin Scene Flow (GMSF). Our approach consists of three main contributions:
+            <ol>
+              <li>We introduce DiffSF, leveraging diffusion models to solve the full scene flow estimation problem, where the inherent noisy property of the diffusion process filters out noisy data, thus, increasing the focus on learning the relevant patterns.</li>
+              <li>DiffSF introduces randomness to the scene flow estimation task, which allows us to predict the uncertainty of the estimates without being explicitly trained for this purpose.</li>
+              <li>We develop a novel architecture that combines transformers and diffusion models for the task of scene flow estimation, improving both accuracy and robustness for a variety of datasets.</li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+</div> 
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{zhang2024diffsf,
+        title={DiffSF: Diffusion Models for Scene Flow Estimation},
+        author={Zhang, Yushan and Wandt, Bastian and Magnusson, Maria and Felsberg, Michael},
+        journal={arXiv preprint arXiv:2403.05327},
+        year={2024}
+      }
+</code></pre>
+  </div>
+</section>
+    
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+            Website template from <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
